@@ -8,7 +8,7 @@ ENV JIRA_VERSION  7.6.0
 # Install Atlassian JIRA and helper tools and setup initial home
 # directory structure.
 RUN set -x \
-    && apk --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/main --repository http://dl-cdn.alpinelinux.org/alpine/edge/community add coreutils sed bash curl tar xmlstarlet tomcat-native \
+    && apk --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/main --repository http://dl-cdn.alpinelinux.org/alpine/edge/community add coreutils sed bash curl tar xmlstarlet tomcat-native ttf-dejavu \
     && addgroup jira \
     && adduser -S -G jira jira \
     && mkdir -p                "${JIRA_HOME}" \
